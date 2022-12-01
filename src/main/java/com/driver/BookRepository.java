@@ -6,11 +6,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BookRepository {
     Map<Integer, Book> hm;
+    static int id=0;
     public BookRepository(){
         hm=new HashMap<>();
     }
 
     public Book save(Book book){
+        id++;
+        book.setId(id);
         hm.put(book.getId(), book);
         return book;
     }
