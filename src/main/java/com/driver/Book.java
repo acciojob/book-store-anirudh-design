@@ -10,6 +10,13 @@ public class Book {
      
      private String author;
 
+     public Book(int id, String name, String genre, String author) {
+          this.id = id;
+          this.name = name;
+          this.genre = genre;
+          this.author = author;
+     }
+
      public int getId() {
           return id;
      }
